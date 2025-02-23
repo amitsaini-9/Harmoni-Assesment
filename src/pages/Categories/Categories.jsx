@@ -1,4 +1,3 @@
-// src/pages/Categories/index.jsx
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams, useNavigate } from "react-router-dom";
@@ -11,7 +10,7 @@ import ProductGrid from "../../components/ProductGrid/ProductGrid";
 import ProductModal from "../../components/ProductModal/ProductModal";
 
 function Categories() {
-  const { categoryName } = useParams(); // Changed from category to categoryName
+  const { categoryName } = useParams();
   const navigate = useNavigate();
   const [selectedCategory, setSelectedCategory] = useState(
     categoryName || null
@@ -85,7 +84,6 @@ function Categories() {
       <ErrorMessage message={error} retry={() => dispatch(fetchProducts())} />
     );
   }
-  // Handle category selection
   const handleCategoryClick = (category) => {
     if (category) {
       navigate(`/categories/${encodeURIComponent(category)}`);
@@ -94,7 +92,6 @@ function Categories() {
     }
   };
 
-  // Handle modal open
   const handleOpenModal = (product) => {
     setSelectedProduct(product);
     setIsModalOpen(true);

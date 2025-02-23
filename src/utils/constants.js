@@ -1,4 +1,3 @@
-// src/utils/constants.js
 export const ROUTES = {
   HOME: "/",
   PRODUCT: "/product/:id",

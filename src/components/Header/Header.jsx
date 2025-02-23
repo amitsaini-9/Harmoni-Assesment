@@ -1,4 +1,3 @@
-// src/components/Header/Header.jsx
 import { useState, useRef } from "react";
 import { ChevronDownIcon, ShoppingCartIcon } from "@heroicons/react/24/outline";
 import { UserCircleIcon } from "@heroicons/react/24/solid";
@@ -98,7 +97,7 @@ function Header() {
           </div>
         </div>
 
-        {/* Mobile Search Bar */}
+        {/* Search Bar */}
         <div className="mt-3 md:hidden">
           <SearchBox />
         </div>

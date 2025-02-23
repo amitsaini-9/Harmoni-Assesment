@@ -1,4 +1,3 @@
-// src/components/ProductModal/ProductModal.jsx
 import { Fragment, useState } from "react";
 import {
   Dialog,
@@ -34,7 +33,6 @@ function ProductModal({ isOpen, onClose, product }) {
         aria-labelledby="product-modal-title"
         aria-describedby="product-modal-description"
       >
-        {/* Background overlay */}
         <TransitionChild
           as={Fragment}
           enter="ease-out duration-300"
@@ -47,7 +45,6 @@ function ProductModal({ isOpen, onClose, product }) {
           <div className="fixed inset-0 bg-black bg-opacity-25" />
         </TransitionChild>
 
-        {/* Modal */}
         <div className="fixed inset-0 overflow-y-auto">
           <div className="flex min-h-full items-center justify-center p-4">
             <TransitionChild

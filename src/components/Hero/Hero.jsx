@@ -1,14 +1,11 @@
-// src/components/Hero/Hero.jsx
 function Hero() {
   return (
     <div className="relative">
-      {/* Split background */}
       <div className="absolute inset-0 flex">
         <div className="w-1/2 bg-white"></div>
-        <div className="w-1/2 bg-[#FFF176]"></div> {/* Light yellow color */}
+        <div className="w-1/2 bg-[#FFF176]"></div>
       </div>
 
-      {/* Content */}
       <div className="relative py-32 container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto">
           <h1 className="text-5xl font-bold mb-6">

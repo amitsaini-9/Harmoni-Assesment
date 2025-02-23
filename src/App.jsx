@@ -1,4 +1,3 @@
-// src/App.jsx
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Provider } from "react-redux";
 import { store } from "./redux/store";
@@ -28,7 +27,7 @@ function App() {
                   element={<Categories />}
                 />
                 <Route path="/contact" element={<Contact />} />
-                <Route path="/cart" element={<Cart />} />
+
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </main>

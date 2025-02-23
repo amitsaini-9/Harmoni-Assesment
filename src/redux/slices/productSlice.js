@@ -1,4 +1,3 @@
-// src/redux/slices/productSlice.js
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { STATUS } from "../../utils/constants";
 import { toast } from "react-hot-toast";
@@ -6,7 +5,6 @@ import { toast } from "react-hot-toast";
 // Base URL constant
 const BASE_URL = "https://fakestoreapi.com";
 
-// Async Thunks
 export const fetchProducts = createAsyncThunk(
   "products/fetchProducts",
   async (_, { rejectWithValue }) => {
@@ -65,7 +63,6 @@ const productSlice = createSlice({
   },
   extraReducers: (builder) => {
     builder
-      // Fetch All Products
       .addCase(fetchProducts.pending, (state) => {
         state.status = STATUS.LOADING;
         state.error = null;
@@ -79,7 +76,6 @@ const productSlice = createSlice({
         state.status = STATUS.FAILED;
         state.error = action.payload;
       })
-      // Fetch Products by Category
       .addCase(fetchProductsByCategory.pending, (state) => {
         state.status = STATUS.LOADING;
         state.error = null;
@@ -96,7 +92,6 @@ const productSlice = createSlice({
   },
 });
 
-// Selectors
 export const selectAllProducts = (state) => state.products.items;
 export const selectProductsStatus = (state) => state.products.status;
 export const selectProductsError = (state) => state.products.error;
@@ -105,7 +100,6 @@ export const selectSelectedCategory = (state) =>
 export const selectIsLoading = (state) =>
   state.products.status === STATUS.LOADING;
 
-// Actions
 export const { clearError, setSelectedCategory } = productSlice.actions;
 
 export default productSlice.reducer;

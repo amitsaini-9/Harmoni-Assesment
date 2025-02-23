@@ -1,4 +1,3 @@
-// src/components/DiscoverSection/DiscoverSection.jsx
 function DiscoverSection() {
   return (
     <section className="bg-black text-white py-16">

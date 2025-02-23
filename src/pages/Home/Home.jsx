@@ -1,4 +1,3 @@
-// src/pages/Home/Home.jsx
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchProducts } from "../../redux/slices/productSlice";
@@ -10,7 +9,6 @@ import ProductModal from "../../components/ProductModal/ProductModal";
 function Home() {
   const dispatch = useDispatch();
   const { items, status, error } = useSelector((state) => state.products);
-  // Add these state variables for modal
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -20,7 +18,6 @@ function Home() {
     }
   }, [status, dispatch]);
 
-  // Add these handlers for modal
   const handleOpenModal = (product) => {
     setSelectedProduct(product);
     setIsModalOpen(true);
@@ -44,10 +41,8 @@ function Home() {
       <Hero />
       <DiscoverSection />
       <main className="container mx-auto px-4 py-8">
-        {/* Pass the handleOpenModal to ProductGrid */}
         <ProductGrid products={items} onOpenModal={handleOpenModal} />
 
-        {/* Add the ProductModal component */}
         <ProductModal
           isOpen={isModalOpen}
           onClose={handleCloseModal}

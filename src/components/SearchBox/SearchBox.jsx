@@ -1,4 +1,3 @@
-// src/components/SearchBox/SearchBox.jsx
 import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 import { useEffect, useRef, useState } from "react";
 import { toast } from "react-hot-toast";
@@ -37,7 +36,6 @@ function SearchBox() {
     fetchCategories();
   }, []);
 
-  // Use click outside hook
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
@@ -50,14 +48,12 @@ function SearchBox() {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
-  // Handle category selection
   const handleCategorySelect = (category) => {
     setSearchTerm(category);
     setShowDropdown(false);
     navigate(`/categories/${encodeURIComponent(category)}`);
   };
 
-  // Handle search submit
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!searchTerm.trim()) {

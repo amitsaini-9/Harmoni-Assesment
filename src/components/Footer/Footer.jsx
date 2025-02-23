@@ -1,4 +1,3 @@
-// src/components/Footer/Footer.jsx
 import { useState } from "react";
 
 function Footer() {
@@ -121,7 +120,7 @@ function Footer() {
         </div>
       </div>
 
-      {/* Copyright Section - Full Width Border */}
+      {/* Copyright Section */}
       <div className="border-t border-gray-800 mt-8">
         <div className="container mx-auto px-4">
           <p className="py-8 text-center text-gray-400">

@@ -1,4 +1,3 @@
-// src/components/ProductGrid/ProductGrid.jsx
 import ProductCard from "../ProductCard/ProductCard";
 
 function ProductGrid({ products, onOpenModal }) {

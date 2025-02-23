@@ -1,4 +1,3 @@
-// src/services/api.js
 import axios from "axios";
 import { toast } from "react-hot-toast";
 
@@ -54,7 +53,6 @@ const handleApiError = (error) => {
 
 // API service functions with error handling
 export const apiService = {
-  // Get all products
   async getProducts() {
     try {
       const response = await api.get(endpoints.products);
@@ -66,7 +64,6 @@ export const apiService = {
     }
   },
 
-  // Get product by ID
   async getProduct(id) {
     try {
       const response = await api.get(endpoints.product(id));
@@ -78,7 +75,6 @@ export const apiService = {
     }
   },
 
-  // Get all categories
   async getCategories() {
     try {
       const response = await api.get(endpoints.categories);
@@ -90,7 +86,6 @@ export const apiService = {
     }
   },
 
-  // Get products by category
   async getProductsByCategory(category) {
     try {
       if (!category) {
@@ -105,7 +100,6 @@ export const apiService = {
     }
   },
 
-  // Generic fetch with error handling
   async fetchWithErrorHandling(url) {
     try {
       const response = await api.get(url);
@@ -117,29 +111,5 @@ export const apiService = {
     }
   },
 };
-
-// Request interceptor
-api.interceptors.request.use(
-  (config) => {
-    // You can add auth headers or other request modifications here
-    return config;
-  },
-  (error) => {
-    return Promise.reject(error);
-  }
-);
-
-// Response interceptor
-api.interceptors.response.use(
-  (response) => {
-    return response;
-  },
-  (error) => {
-    // Global error handling
-    const errorMessage = handleApiError(error);
-    console.error("API Error:", errorMessage);
-    return Promise.reject(error);
-  }
-);
 
 export default apiService;

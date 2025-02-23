@@ -16,9 +16,9 @@ A responsive React e-commerce application built with Vite that simulates an onli
 ### Installation Steps
 
 1. Clone the repository
-   git clone https://github.com/your-username/your-repo-name.git"
+   git clone https://github.com/amitsaini-9/Harmoni-Assesment.git
 2. Navigate to project directory
-   cd your-repo-name
+   cd Harmon-Assesment
 3. Install dependencies
    npm install
 4. Start development server

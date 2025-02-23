@@ -1,4 +1,3 @@
-// src/pages/Contact/index.jsx
 import { useState } from "react";
 
 function Contact() {
@@ -11,7 +10,7 @@ function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission
+    // Handle form submission Logic
     console.log("Form submitted:", formData);
   };
 
