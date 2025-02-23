@@ -7,9 +7,9 @@ import Home from "./pages/Home/Home";
 import NotFound from "./pages/NotFound/NotFound";
 import Categories from "./pages/Categories/Categories";
 import Contact from "./pages/Contact/Contact";
-import Cart from "./pages/Cart/Cart";
 import { Toaster } from "react-hot-toast";
 import ErrorBoundary from "./components/common/ErrorBoundary";
+import Cart from "./pages/Cart/Cart";
 
 function App() {
   return (
@@ -27,7 +27,7 @@ function App() {
                   element={<Categories />}
                 />
                 <Route path="/contact" element={<Contact />} />
-
+                <Route path="/cart" element={<Cart />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </main>
